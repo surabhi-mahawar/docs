@@ -6,13 +6,26 @@ sidebar_label: Deploy UCI
 
 ## 1. Overview
 
-This doc helps you to deploy & run UCI repositories & services using docker.
+This document helps you to deploy & run UCI services using docker. We currently have various services running that are being used to .
+1. Inbound - recieves the bot messages
+2. Orchestrator - 
+3. Transformer - decides what should be the response to the incoming message
+4. Outbound - send reply to user
+5. Federation service - admin console 
+
+
+1. Kafka - for queuing events
+2. Zookeeper - for coordinating with kafka
+3. Formsdb - for storing data like question, assessment
+4. Cassandra - for storing data like xmessage
+5. Redis - for caching 
 
 ## 2 Prerequisites
 
-1. If you do not have docker set up, Please install and setup docker.
+1. If you do not have docker set up, Please [install](https://docs.docker.com/compose/) and setup docker.
+2. 
 
-## 3. Steps to follow for first installation
+## 3. Steps to follow for first time installation
 1. Take pull from the deploy repository.  
 
 ```
