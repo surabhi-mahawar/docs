@@ -56,6 +56,7 @@ Enter password when asked. Once you have logged in to the docker, you can pull t
 ```
 docker-compose pull
 ```
+Then ```.env``` file in the deploy repo has all the environment variables which are needed for the services. Docker image of all functional services will be fetched according to the version mentioned in the file.  
 
 3. Once all the images are fetched, run below command to run the services.
 ```
@@ -65,4 +66,4 @@ docker-compose -f docker-compose.yml up -d
 
 5. Use ```docker-compose logs --follow``` to check the logs.  
 
-These needs to be followed for every new deployment. 
+These steps needs to be followed for every new deployment. 
