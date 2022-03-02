@@ -6,14 +6,14 @@ sidebar_label: Deploy UCI
 
 ## 1. Overview
 
-This document helps you to deploy & run UCI services using docker. We currently have various services running that are being used to .
+This document helps you to deploy & run UCI services using docker. We currently have various services running that are as follows.
 1. Inbound - recieves the bot messages
-2. Orchestrator - 
+2. Orchestrator - orchestrates the data
 3. Transformer - decides what should be the response to the incoming message
-4. Outbound - send reply to user
+4. Outbound - sends reply to user
 5. Federation service - admin console 
 
-
+Other services:
 1. Kafka - for queuing events
 2. Zookeeper - for coordinating with kafka
 3. Formsdb - for storing data like question, assessment
@@ -23,10 +23,9 @@ This document helps you to deploy & run UCI services using docker. We currently 
 ## 2 Prerequisites
 
 1. If you do not have docker set up, Please [install](https://docs.docker.com/compose/) and setup docker.
-2. 
 
 ## 3. Steps to follow for first time installation
-1. Take pull from the deploy repository.  
+1. Clone the deploy repository.  
 
 ```
 git clone https://github.com/samagra-comms/deploy.git
@@ -50,16 +49,20 @@ Enter password when asked. Once you have logged in to the docker, you can pull t
 
 
 ### 4. Steps to follow to deploy the services.
-1. Fetch the images mentioned in the Dockerfile by running below command.
+1. Take pull from the deploy repository.
+
+2. Fetch the docker images mentioned in the Dockerfile by running below command.
 
 ```
 docker-compose pull
 ```
 
-2. Once all the images are fetched, run below command to run the services.
+3. Once all the images are fetched, run below command to run the services.
 ```
 docker-compose -f docker-compose.yml up -d 
 ```
-3. Use ```docker ps``` to check if all the services are running.
+4. Use ```docker ps``` to check if all the services are running.
 
-4. Use ```docker-compose logs --follow``` to check the logs.  
+5. Use ```docker-compose logs --follow``` to check the logs.  
+
+These needs to be followed for every new deployment. 
